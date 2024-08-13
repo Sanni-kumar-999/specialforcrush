@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PAGE 3 </title>
+    <style>
+        body {
+            background-color: #800020;
+            font-family: 'Georgia';
+          
+        }
+        
+        .postcard{
+            display:grid;
+            grid-template-columns: .80fr .30fr ;
+            grid-template-rows: 1fr  1fr ;
+            grid-template-areas:
+              "dear stamp"
+              "note test";
+            background-color: #f7f7f7;
+            width: 850px;
+            height: 535px;
+            margin: 0 auto;
+            margin-top: 5%;
+            border-radius: 2%;
+            padding: 2%;
+            padding-bottom: 12%;
+            box-shadow: .8em .8em 15px rgba(0,0,0,.3);
+        }
+          
+        h1 {
+            text-align: center;
+            color: #f7f7f7;
+            font-size: 290%;
+            margin-top: 0%;
+            margin-bottom: 0%;
+        }
+        
+        #dear{
+            padding-top: 5%;
+            font-size: 190%;
+            grid-area: dear;
+        }
+        
+        #message{
+            font-size: 145%;
+            grid-area: note;  
+            margin-right: 7%;
+        }
+          
+        #mail{
+            grid-area:stamp;
+            display:grid;
+              grid-template-columns:  1fr 1fr ;
+              grid-template-rows: 1fr ;
+              grid-template-areas:
+              "from stamps";
+        }
+        
+        #mail_stamp {
+            max-width: 95%;
+            padding-left: 10%;
+            grid-area: stamps;
+            padding-top: 10%;
+        }
+          
+        #from{
+              font-size: 120%;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              grid-area: from;
+        }
+
+        @media (max-width: 768px) {
+            .postcard {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "dear"
+                    "message"
+                    "stamp";
+            }
+
+            #dear {
+                font-size: 1.1em;
+                text-align: center;
+            }
+
+            #message {
+                font-size: 0.9em;
+                margin-right: 0;
+            }
+
+            #mail {
+                align-items: center;
+            }
+
+            #from {
+                font-size: 0.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .postcard {
+                padding: 1%;
+                box-shadow: 0 .2em .5em rgba(0, 0, 0, .3);
+            }
+
+            #dear {
+                font-size: 0.9em;
+            }
+
+            #message {
+                font-size: 0.8em;
+            }
+
+            #mail {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #from {
+                font-size: 0.7em;
+            }
+        }
+    </style>
+</head>
+<body>
+  <div class = "wrap">
+
+    <div class = "postcard">
+
+        <span id = "dear">Dear life,</span>
+            
+            <span id = "message">
+				Love for you is a journey of discovery and growth. Every moment with you feels like a precious gift, and I cherish the way we laugh, share, and support each other through life's ups and downs. Your smile brightens my darkest days, and your presence brings a sense of peace and warmth that words cannot fully capture. I admire your strength, your kindness, and the way you effortlessly make the world a better place just by being in it. You inspire me to be the best version of myself, and I am endlessly grateful for the love we share. Our bond is my greatest treasure, and I am excited for all the adventures and memories that await us. With you, I've found a love that is pure, genuine, and unwavering, and I am committed to nurturing and cherishing this beautiful connection for all the days to come.
+            <br>
+			<br>
+			Love,
+            <br>Pandey Ji
+			</span>
+         
+			<span id= "mail" >
+				<img id= "mail_stamp" src = "stamp.png" alt="stamp" >
+				<span id= "from"> Pandey Ji </span>
+
+			</span>
+	
+    </div>
+  </div>
+  
+  
+
+</body>
+</html>
